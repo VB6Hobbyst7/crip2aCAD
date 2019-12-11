@@ -6,8 +6,8 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{13538241-ECDA-4359-8495-F219EA1C0470}</ProjectGuid>
     <OutputType>Library</OutputType>
-    <RootNamespace>crip2aCAD</RootNamespace>
-    <AssemblyName>crip2aCAD</AssemblyName>
+    <RootNamespace>crip2aCADUC</RootNamespace>
+    <AssemblyName>crip2aCADUC</AssemblyName>
     <FileAlignment>512</FileAlignment>
     <MyType>Windows</MyType>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
@@ -19,7 +19,7 @@
     <DefineDebug>true</DefineDebug>
     <DefineTrace>true</DefineTrace>
     <OutputPath>bin\</OutputPath>
-    <DocumentationFile>crip2aCAD.xml</DocumentationFile>
+    <DocumentationFile>crip2aCADUC.xml</DocumentationFile>
     <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
     <PlatformTarget>x64</PlatformTarget>
   </PropertyGroup>
@@ -29,7 +29,7 @@
     <DefineTrace>true</DefineTrace>
     <Optimize>true</Optimize>
     <OutputPath>bin\</OutputPath>
-    <DocumentationFile>crip2aCAD.xml</DocumentationFile>
+    <DocumentationFile>crip2aCADUC.xml</DocumentationFile>
     <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
   </PropertyGroup>
   <PropertyGroup>
@@ -92,9 +92,7 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="..\..\..\_MODULOS-CLASES\WINDOWS\clsAPI.vb">
-      <Link>clsAPI.vb</Link>
-    </Compile>
+    <Compile Include="clsAPI.vb" />
     <Compile Include="clsCR.vb" />
     <Compile Include="clsCR_Crypto.vb" />
     <Compile Include="clsCR_Eventos.vb" />
@@ -138,10 +136,9 @@
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <PropertyGroup>
-    <PostBuildEvent>copy $(TargetPath) "C:\DESARROLLO\_MODULOS-CLASES\"
-copy $(TargetPath) "C:\DESARROLLO\CLIENTES\ULMACONSTRUCCION\DLLS\"
-copy $(TargetPath) "C:\DESARROLLO\CLIENTES\ULMACONSTRUCCION\UCRevit\DLLS_2ACAD\"
-copy $(TargetPath) "C:\DESARROLLO\CLIENTES\ULMACONSTRUCCION\UCRevitF\DLLS_2ACAD\"</PostBuildEvent>
+    <PostBuildEvent>rem copy $(TargetPath) "C:\DESARROLLO\_MODULOS-CLASES\"
+rem copy $(TargetPath) "C:\DESARROLLO\CLIENTES\ULMACONSTRUCCION\DLLS\"
+rem copy $(TargetPath) "C:\DESARROLLO\CLIENTES\ULMACONSTRUCCION\UCRevit\DLLS_2ACAD\"</PostBuildEvent>
   </PropertyGroup>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

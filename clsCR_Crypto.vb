@@ -173,7 +173,7 @@ Final:
         If activado = False Then Exit Sub
         ' ********************************
         ' Solo encriptar si crEncrypt = True
-        If crip2aCAD.clsCR.crEncrypt = True Then
+        If crip2aCADUC.clsCR.crEncrypt = True Then
             ' Cerrar el documento original, si estaba abierto y no es el activo.
             Call Documento_EstaAbierto(crAppUI.Application, FileOut, cerrar:=True)
             ' Quitar sólo lectura del destino, ya que lo sobrescribiremos.
@@ -202,7 +202,7 @@ Final:
         ' Si no está activado, salir ****
         If activado = False Then Exit Sub
         ' ********************************
-        If crip2aCAD.clsCR.crEncrypt = False Then Exit Sub
+        If crip2aCADUC.clsCR.crEncrypt = False Then Exit Sub
         Dim yaencriptado As Boolean = False
         Dim esviejo As Boolean = False
         Dim enuso As Boolean = False
@@ -380,7 +380,7 @@ FINAL:
         If activado = False Then Exit Sub
         ' ********************************
         ' Solo encriptar si crEncrypt = True
-        If crip2aCAD.clsCR.crEncrypt = True Then
+        If crip2aCADUC.clsCR.crEncrypt = True Then
             Fichero_Encripta(FileIn, conimagen)
             Fichero_BackupsEncriptaOBorra(FileIn, BorraBackups)
         End If
@@ -390,7 +390,7 @@ FINAL:
         ' Si no está activado, salir ****
         If activado = False Then Exit Sub
         ' ********************************
-        If crip2aCAD.clsCR.crEncrypt = False Then Exit Sub
+        If crip2aCADUC.clsCR.crEncrypt = False Then Exit Sub
         Dim FileOut As String = ""
         Dim suf As String = ".tempcrypto"
         Dim yaencriptado As Boolean = False
@@ -575,7 +575,7 @@ FINAL:
         ' Si no está activado, salir ****
         If activado = False Then Exit Sub
         ' ********************************
-        If crip2aCAD.clsCR.crEncrypt = False Then Exit Sub
+        If crip2aCADUC.clsCR.crEncrypt = False Then Exit Sub
         Dim FileOut As String = ""
         Dim suf As String = ".tempcrypto"
         Dim yaencriptado As Boolean = False
@@ -747,7 +747,7 @@ FINAL:
         Dim yaencriptado As Boolean = False
         Dim esviejo As Boolean = False
         '
-        If crip2aCAD.clsCR.crEncrypt = False Then
+        If crip2aCADUC.clsCR.crEncrypt = False Then
             Return FileIn   ' FileOut
             Exit Function
         End If

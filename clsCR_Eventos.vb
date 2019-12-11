@@ -44,7 +44,7 @@ Partial Public Class clsCR
         If crPuedoborrar = False Then Exit Sub
         Try
             'If (crip2aCAD.clsCR.oTBorraTodo Is Nothing) Or (crip2aCAD.clsCR.oTBorraTodo IsNot Nothing AndAlso crip2aCAD.clsCR.oTBorraTodo.Status <> System.Threading.Tasks.TaskStatus.Running) Then
-            crip2aCAD.clsCR.oTBorraTodo = System.Threading.Tasks.Task.Run(AddressOf crip2aCAD.clsCR.FicherosDesarrollo_BorraTemp)
+            crip2aCADUC.clsCR.oTBorraTodo = System.Threading.Tasks.Task.Run(AddressOf crip2aCADUC.clsCR.FicherosDesarrollo_BorraTemp)
             'End If
         Catch ex As Exception
             Debug.Print(ex.ToString)
@@ -105,22 +105,7 @@ Partial Public Class clsCR
         '        'Debug.Print(ex.ToString)
         '    End Try
         'Next
-        crip2aCAD.clsCR.oTBorraTodo = Nothing
+        crip2aCADUC.clsCR.oTBorraTodo = Nothing
     End Sub
     '
-    Public Shared Sub Comando_AnulaConEscape()
-        ' Si no está activado, salir ****
-        If activado = False Then Exit Sub
-        ' ********************************
-        Dim rvtIntPtr As IntPtr = Autodesk.Windows.ComponentManager.ApplicationWindow
-        clsAPI.SetForegroundWindow(rvtIntPtr)
-        Try
-            clsAPI.keybd_event(clsAPI.eMensajes.VK_ESCAPE, 0, 0, 0)
-            clsAPI.keybd_event(clsAPI.eMensajes.VK_ESCAPE, 0, 2, 0)
-            clsAPI.keybd_event(clsAPI.eMensajes.VK_ESCAPE, 0, 0, 0)
-            clsAPI.keybd_event(clsAPI.eMensajes.VK_ESCAPE, 0, 2, 0)
-        Catch ex As Exception
-            'Debug.Print(ex.ToString)
-        End Try
-    End Sub
 End Class

@@ -8,17 +8,17 @@ Imports System.Runtime.InteropServices
 
 ' Revisar los valores de los atributos del ensamblado
 
-<Assembly: AssemblyTitle("crip2aCAD")> 
-<Assembly: AssemblyDescription("")> 
-<Assembly: AssemblyCompany("")> 
-<Assembly: AssemblyProduct("crip2aCAD")> 
-<Assembly: AssemblyCopyright("Copyright ©  2018")> 
-<Assembly: AssemblyTrademark("")> 
+<Assembly: AssemblyTitle("crip2aCADUC")>
+<Assembly: AssemblyDescription("")>
+<Assembly: AssemblyCompany("crip2aCADUC")>
+<Assembly: AssemblyProduct("crip2aCADUC")>
+<Assembly: AssemblyCopyright("Copyright © 2aCAD Graitec Group 2018")>
+<Assembly: AssemblyTrademark("crip2aCADUC")>
 
 <Assembly: ComVisible(False)>
 
 'El siguiente GUID sirve como id. de typelib si este proyecto se expone a COM.
-<Assembly: Guid("e6d0cc2f-f276-471d-9e93-7de142c36851")>
+<Assembly: Guid("EC2AB5BB-EDED-40F2-856D-9989F3D9D3A7")>
 
 ' La información de versión de un ensamblado consta de los cuatro valores siguientes:
 '
@@ -31,5 +31,5 @@ Imports System.Runtime.InteropServices
 ' mediante el carácter '*', como se muestra a continuación:
 ' <Assembly: AssemblyVersion("1.0.*")> 
 
-<Assembly: AssemblyVersion("2018.1.2.0")>
-<Assembly: AssemblyFileVersion("2018.1.2.0")>
+<Assembly: AssemblyVersion("1.0.0.2")>
+<Assembly: AssemblyFileVersion("1.0.0.2")>

@@ -85,7 +85,7 @@ Partial Public Class clsCR
     Protected Friend Shared activado As Boolean = False
 
     Public Sub New(k As String)
-        If String.Equals(k, Me.key) Then ', StringComparison.CurrentCulture) Then
+        If k = Me.key Then ', StringComparison.CurrentCulture) Then
             activado = True
         Else
             activado = False
